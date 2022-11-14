@@ -23,6 +23,10 @@
     "url": "https://github.com/Vincenttoon/contact-card/issues"
   },
   "homepage": "https://github.com/Vincenttoon/contact-card#readme",
+  "engines": {
+    "node": "16.17.0"
+  },
+  "heroku-prebuild": "npm install --dev",
   "dependencies": {
     "concurrently": "^7.5.0"
   }
