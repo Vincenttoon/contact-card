@@ -1,5 +1,5 @@
 import "./form";
-import { initdb, getDb, postDb } from "./database";
+import { initdb, getDb, postDb, deleteDb } from "./database";
 import { fetchCards } from "./cards";
 import { toggleForm, clearForm } from "./form";
 
@@ -55,3 +55,11 @@ form.addEventListener("submit", (event) => {
   // Reload the DOM
   fetchCards();
 });
+
+window.deleteCard = (e) => {
+    let id = parseInt(e.id);
+    // delete the card
+    deleteDb(id);
+    // Reload the DOM
+    fetchCards();
+};
